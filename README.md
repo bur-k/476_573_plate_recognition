@@ -3,7 +3,7 @@ python3 plaka_tanima.py --folder <folder_name>
 folder_name should end with "/"
 
 # OCR-Training steps
-# Hazırlık: git clone https://github.com/openalpr/train-ocr
+Hazırlık: git clone https://github.com/openalpr/train-ocr
 # 1- Karakter sınıflandırmak için aşağıdaki komutu çalıştırın
 <br> openalpr-utils-classifychars [countrycode] [input image directory] [empty output directory]
 <br> Örnek komut: openalpr-utils-classifychars eu font1 output_font1
