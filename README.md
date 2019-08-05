@@ -6,6 +6,7 @@ preprocessing olarak input olarak verilecek folder'ın içerisinde bir kereliği
 ## OCR-Training adımları
 Hazırlık: ```git clone https://github.com/openalpr/train-ocr```
 ### 1- Karakter sınıflandırmak için aşağıdaki komutu çalıştırın
+Bu işlemi Windows ortamında gerçekleştirmek için https://github.com/glleung/LPReader bu linkteki repo klonlanarak openalpr_64bit klasörü altındaki executable **openalpr-utils-classifychars.exe** kullanılabilir. Bu işlem yapılırken  input folder'ındaki tüm dosyaların uzantılarını küçük harflere çevirmek gerekebilir. (.JPG->.jpg gibi) <br>
 ```openalpr-utils-classifychars [countrycode] [input image directory] [empty output directory]```
 <br> Örnek komut: openalpr-utils-classifychars eu font1/ output_font1/
 #### Input dosyasındaki her plakanın karakterlerini sınıflandırabileceğiniz bir GUI açılınca bu adımları uygulayın:
@@ -26,6 +27,7 @@ etilmiş .box ve .tif dosyalarını taşıyın.
 
 ### 3- Train etmek için aşağıdaki komutu çalıştırın
 ```python2 train.py [countrycode]```
+<br> Not: **train.py** içerisindeki path'ler uygun şekilde ayarlanmalıdır.
 <br> Çıktı 'l[countrycode].traineddata' olmalıdır.
 <br> Oluşan dosya'nın path'i '/usr/share/openalpr/runtime_data/ocr/leu.traineddata' olacak şekilde ayarlanmalıdır.
 
