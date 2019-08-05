@@ -10,7 +10,7 @@ Hazırlık: git clone https://github.com/openalpr/train-ocr
 # Input dosyasındaki her plakanın karakterlerini sınıflandırabileceğiniz bir GUI açılınca bu adımları uygulayın:
 <br> 1.1- Açılan ilk resimde enter'a basın. 
 <br> 1.2- Her karakter için o karakteri klavyeden yazın. 
-<br> 1.3- Boşuk tuşuna basarak fotoğrafın etrafındaki mavi çerçeveyi görün.
+<br> 1.3- Boşluk tuşuna basarak fotoğrafın etrafındaki mavi çerçeveyi görün.
 <br> 1.4- Bir sonraki çerçeveye geçmek için sağ ok tuşunu kullanın. 
 <br> 1.5- 3. çerçeve tanımlanmadıysa 1. adıma geri dönün.
 <br> 1.6- 3. çerçeve tanımlandıysa tanımlanan karakterleri kaydetmek için 'S' tuşuna basın.
