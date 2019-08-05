@@ -81,7 +81,7 @@ def process():
                 cand_conf = []
                 file_path = ARGS['folder'] + file
                 f.write(
-                    "<tr><td align='center'>{}</td><td align='center'><img src={} border=3 height=150></img></td>".format(
+                    "<tr><td align='center'>{}</td><td align='center'><img src={} border=3 height=100></img></td>".format(
                         file[:file.find('.')], file_path))
                 temp = 0
                 hasMatch = 0
