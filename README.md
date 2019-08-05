@@ -1,7 +1,8 @@
 # 476_573_plate_recognition
 preprocessing olarak input olarak verilecek folder'ın içerisinde bir kereliğine terminal üzerinden **```mogrify -resize 200X200 .*.```** komutunu çalıştırın. <br>
 ```python3 plaka_tanima.py --folder <folder_name>```
-<br>folder_name should end with "/"
+<br>Note: folder_name should end with "/"
+<br>**results.html** must be created in repo directory.
 
 ## OCR-Training adımları
 Hazırlık: ```git clone https://github.com/openalpr/train-ocr```
