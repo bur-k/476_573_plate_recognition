@@ -1,3 +1,11 @@
+//TO-DO
+Yükleme adımları güncellenecek
+Tesseract-Ocr versiyonu (4.0.0) belirtilecek
+Tesseract-Ocr training toolları ile birlikte compile edilecek, compile aşamaları anlatılacak
+input dosyası üzeirnde resize işlemi anlatılacak
+Son adımdaki run komutu yazılacak
+
+
 # 476_573_plate_recognition
 python3 plaka_tanima.py --folder <folder_name>
 folder_name should end with "/"
