@@ -2,6 +2,40 @@
 python3 plaka_tanima.py --folder <folder_name>
 folder_name should end with "/"
 
+# OCR-Training steps
+# Hazırlık: git clone https://github.com/openalpr/train-ocr
+# 1- Karakter sınıflandırmak için aşağıdaki komutu çalıştırın
+<br> openalpr-utils-classifychars [countrycode] [input image directory] [empty output directory]
+<br> Örnek komut: openalpr-utils-classifychars eu font1 output_font1
+# Input dosyasındaki her plakanın karakterlerini sınıflandırabileceğiniz bir GUI açılınca bu adımları uygulayın:
+<br> 1.1- Açılan ilk resimde enter'a basın. 
+<br> 1.2- Her karakter için o karakteri klavyeden yazın. 
+<br> 1.3- Boşuk tuşuna basarak fotoğrafın etrafındaki mavi çerçeveyi görün.
+<br> 1.4- Bir sonraki çerçeveye geçmek için sağ ok tuşunu kullanın. 
+<br> 1.5- 3. çerçeve tanımlanmadıysa 1. adıma geri dönün.
+<br> 1.6- 3. çerçeve tanımlandıysa tanımlanan karakterleri kaydetmek için 'S' tuşuna basın.
+<br> 1.7- Bir sonraki plakaya geçmek için 'n' tuşuna basın, önceki plakaya gitmek için'p' tuşuna basın.
+
+# 2- .tif ve .box dosyalarını üretmek için aşağıdaki komutu çalıştırın
+<br> openalpr-utils-prepcharsfortraining [output directory from above]
+<br> Çıktı combined.box ve combined.tif olmalıdır.
+<br> 1.1- .box ve .tif dosyalarını Tesseract'ın isimlendirme kurallarına göre uzantıları değiştirmeden isimlendirin. Örnek :    leu.turkey.exp0.box, leu.turkey.exp1.box
+<br> 1.2- Eğitmek istediğiniz Country code ile isimlendirilmiş klasörün içindeki input klasörüne önceki adımda ür
+etilmiş .box ve .tif dosyalarını taşıyın.
+
+# 3- Train etmek için aşağıdaki komutu çalıştırın
+<br> python2 train.py [countrycode]
+<br> Çıktı 'l[countrycode].traineddata' olmalıdır.
+<br> Oluşan dosya'nın path'i '/usr/share/openalpr/runtime_data/ocr/leu.traineddata' olacak şekilde ayarlanmalıdır.
+
+
+
+
+
+
+
+
+
 # installation
 <br>   54  sudo gedit /etc/apt/sources.list (add "deb http://archive.ubuntu.com/ubuntu bionic universe" to the bottom of the page)
 <br>   11  sudo apt-get update
@@ -28,3 +62,4 @@ folder_name should end with "/"
 <br>       sudo apt-get install libleptonica-dev
 <br>   66  tar xf leptonica-1.78.0.tar.gz
 <br>    8  python3 plaka_tanima.py --folder araba/
+
