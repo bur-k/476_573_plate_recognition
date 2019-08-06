@@ -32,6 +32,7 @@ Bu işlemi Windows ortamında gerçekleştirmek için [bu](https://github.com/gl
 <br> Not: **train.py** içerisindeki path'ler uygun şekilde ayarlanmalıdır.
 <br> Çıktı 'l[countrycode].traineddata' olmalıdır.
 <br> Oluşan dosya'nın path'i '/usr/share/openalpr/runtime_data/ocr/leu.traineddata' olacak şekilde ayarlanmalıdır.
+<br> Bu işlemler tamamlandığında [linkteki](https://github.com/bur-k/476_573_plate_recognition/blob/master/traineddata.zip) dosyaya benzer bir dosya elde edilmelidir. 
 
 # installation
 Ubuntu 18.04.2 LTS 64bit sistem üzerinden anlatılmıştır.
