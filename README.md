@@ -61,3 +61,14 @@ Ubuntu 18.04.2 LTS 64bit sistem üzerinden anlatılmıştır.
 <br> ```sudo ldconfig```
 <br> ```make training```
 <br> ```sudo make training-install```
+
+# Parametreler & Değişkenler
+**plaka_tanıma.py**
+<br> 38. satırdaki ```alpr.set_top_n(n)``` parametre olarak her bir plaka için bulunması gereken max tahmin sayısını almaktadır.
+<br> 39. satırdaki ```plateRegEx``` değişkeni plakaların uyması gereken regex'i tutmaktadır. 
+**/usr/share/openalpr/config/openalpr.defaults.conf** (Dosyada değişken açıklamaları mevcut olduğundan sadece projede değiştirilen değerler belirtilecektir.)
+<br> 29. satır  ```detection_strictness = 2```
+<br> 59. satır  ```analysis_count = 12```
+<br> 63. satır  ```contrast_detection_threshold = 0.4```
+<br> 70. satır  ```postprocess_min_confidence = 35```
+<br> 74. satır  ```postprocess_confidence_skip_level = 60```
