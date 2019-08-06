@@ -7,7 +7,7 @@ preprocessing olarak input olarak verilecek folder'ın içerisinde bir kereliği
 ## OCR-Training adımları
 Hazırlık: ```git clone https://github.com/openalpr/train-ocr```
 ### 1- Karakter sınıflandırmak için aşağıdaki komutu çalıştırın
-Bu işlemi Windows ortamında gerçekleştirmek için https://github.com/glleung/LPReader bu linkteki repo klonlanarak openalpr_64bit klasörü altındaki executable **openalpr-utils-classifychars.exe** kullanılabilir. Bu işlem yapılırken  input folder'ındaki tüm dosyaların uzantılarını küçük harflere çevirmek gerekebilir. (.JPG->.jpg gibi) <br>
+Bu işlemi Windows ortamında gerçekleştirmek için [bu](https://github.com/glleung/LPReader) linkteki repo klonlanarak openalpr_64bit klasörü altındaki executable **openalpr-utils-classifychars.exe** kullanılabilir. Bu işlem yapılırken  input folder'ındaki tüm dosyaların uzantılarını küçük harflere çevirmek gerekebilir. (.JPG->.jpg gibi) <br>
 ```openalpr-utils-classifychars [countrycode] [input image directory] [empty output directory]```
 <br> Örnek komut: openalpr-utils-classifychars eu font1/ output_font1/
 #### Input dosyasındaki her plakanın karakterlerini sınıflandırabileceğiniz bir GUI açılınca bu adımları uygulayın:
@@ -16,16 +16,16 @@ Bu işlemi Windows ortamında gerçekleştirmek için https://github.com/glleung
 <br> 1.3- Boşluk tuşuna basarak fotoğrafın etrafındaki mavi çerçeveyi görün.
 <br> 1.4- Bir sonraki çerçeveye geçmek için sağ ok tuşunu kullanın. 
 <br> 1.5- 3. çerçeve tanımlanmadıysa 1. adıma geri dönün.
-<br> 1.6- 3. çerçeve tanımlandıysa tanımlanan karakterleri kaydetmek için 'S' tuşuna basın.
-<br> 1.7- Bir sonraki plakaya geçmek için 'n' tuşuna basın, önceki plakaya gitmek için'p' tuşuna basın.
+<br> 1.6- 3. çerçeve tanımlandıysa tanımlanan karakterleri kaydetmek için **S** tuşuna basın.
+<br> 1.7- Bir sonraki plakaya geçmek için **n** tuşuna basın, önceki plakaya gitmek için **p** tuşuna basın.
 <br> Bu işlemler tamamlandığında [linkteki](https://github.com/bur-k/476_573_plate_recognition/blob/master/output.zip) dosyaya benzer klasör ve içeriği elde edilmelidir.
 
 ### 2- .tif ve .box dosyalarını üretmek için aşağıdaki komutu çalıştırın
 ```openalpr-utils-prepcharsfortraining [output directory from above]```
 <br> Çıktı combined.box ve combined.tif olmalıdır.
 <br> 1.1- .box ve .tif dosyalarını Tesseract'ın isimlendirme kurallarına göre uzantıları değiştirmeden isimlendirin. Örnek: leu.turkey.exp0.box, leu.turkey.exp1.box
-<br> 1.2- Eğitmek istediğiniz Country code ile isimlendirilmiş klasörün içindeki input klasörüne önceki adımda ür
-etilmiş .box ve .tif dosyalarını taşıyın.
+<br> 1.2- Eğitmek istediğiniz Country code ile isimlendirilmiş klasörün içindeki input klasörüne önceki adımda üretilmiş .box ve .tif dosyalarını taşıyın.
+<br> Bu işlemler tamamlandığında [linkteki](https://github.com/bur-k/476_573_plate_recognition/blob/master/leu.turkey_tif_n_box_files.zip) dosyaya benzer klasör ve içeriği elde edilmelidir. 
 
 ### 3- Train etmek için aşağıdaki komutu çalıştırın
 ```python2 train.py [countrycode]```
