@@ -18,6 +18,7 @@ Bu işlemi Windows ortamında gerçekleştirmek için https://github.com/glleung
 <br> 1.5- 3. çerçeve tanımlanmadıysa 1. adıma geri dönün.
 <br> 1.6- 3. çerçeve tanımlandıysa tanımlanan karakterleri kaydetmek için 'S' tuşuna basın.
 <br> 1.7- Bir sonraki plakaya geçmek için 'n' tuşuna basın, önceki plakaya gitmek için'p' tuşuna basın.
+<br> Bu işlemler tamamlandığında [linkteki](https://github.com/bur-k/476_573_plate_recognition/blob/master/output.zip) dosyaya benzer klasör ve içeriği elde edilmelidir.
 
 ### 2- .tif ve .box dosyalarını üretmek için aşağıdaki komutu çalıştırın
 ```openalpr-utils-prepcharsfortraining [output directory from above]```
