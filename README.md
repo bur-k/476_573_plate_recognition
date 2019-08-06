@@ -65,8 +65,8 @@ Ubuntu 18.04.2 LTS 64bit sistem üzerinden anlatılmıştır.
 # Parametreler & Değişkenler
 **plaka_tanıma.py**
 <br> 38. satırdaki ```alpr.set_top_n(n)``` parametre olarak her bir plaka için bulunması gereken max tahmin sayısını almaktadır.
-<br> 39. satırdaki ```plateRegEx``` değişkeni plakaların uyması gereken regex'i tutmaktadır. 
-**/usr/share/openalpr/config/openalpr.defaults.conf** (Dosyada değişken açıklamaları mevcut olduğundan sadece projede değiştirilen değerler belirtilecektir.)
+<br> 39. satırdaki ```plateRegEx``` değişkeni plakaların uyması gereken regex'i tutmaktadır.
+<br>**/usr/share/openalpr/config/openalpr.defaults.conf** (Dosyada değişken açıklamaları mevcut olduğundan sadece projede değiştirilen değerler belirtilecektir.)
 <br> 29. satır  ```detection_strictness = 2```
 <br> 59. satır  ```analysis_count = 12```
 <br> 63. satır  ```contrast_detection_threshold = 0.4```
